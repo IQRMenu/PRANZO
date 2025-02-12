@@ -1,22 +1,22 @@
 export let globalData = {
   cafeName: 'PRANZO',
   botToken: '',
-  chatId: '-4661528595',
+  chatId: '-1002275972138',
 
   mainLang: 'es',
   currencySymbol: '$',
   googleLink: 'https://maps.app.goo.gl/aYSYBqbfkfXEXmR18',
   version: 'pro',//pro o basik
 
-  fotmAction: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSePk5-qlP6l6Ued7pi8q5A3RfSUIcY4vqUwjYi1TlIDEM-BqA/formResponse",
+  fotmAction: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScaBuoSfWwvS14cQocAOxqTHg1SRCYdH7DIuWsp77zFdNIpRQ/formResponse",
   inputNames: {
-    inputOrderId: "entry.1753983149",
-    inputLangOrderTable: "entry.868338239",
-    inputTableNumberOrderTable: "entry.814736468",
-    inputVisitorTypeOrderTable: "entry.1357817951",
-    inputDishesOrderTable: "entry.993484371",
-    inputTotolCostOrderTable: "entry.728135158",
-    inputType: "entry.968086505",
+    inputOrderId: "entry.1281979809",
+    inputLangOrderTable: "entry.1676265789",
+    inputTableNumberOrderTable: "entry.47087337",
+    inputVisitorTypeOrderTable: "entry.89167134",
+    inputDishesOrderTable: "entry.229673081",
+    inputTotolCostOrderTable: "entry.1963684257",
+    inputType: "entry.410713072",
     
   }
 
