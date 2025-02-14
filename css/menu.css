@@ -16,6 +16,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+  color: var(--color3);
+  font-size: 18px;
 }
 
 .loader img {
