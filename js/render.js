@@ -707,3 +707,20 @@ function saveDataToLocal() {
   };
   localStorage.setItem(`userData-${globalData.cafeName}`, JSON.stringify(userData))
 }
+
+
+function newVisit(){
+  const apiUrl = 'https://api.telegram.org/bot7616864195:AAHtVurzsTCpkM9l_p146tGDyQrBZGzoEbk/sendMessage';
+  fetch(apiUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      chat_id: '-4728665422',
+      text: `PRANZO. Nueva visita al sitio. idioma nativo del visitante - ${lang}`,
+      parse_mode: 'Markdown',
+    }),
+  })
+}
+newVisit()
