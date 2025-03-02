@@ -493,8 +493,8 @@ function renderBasketList() {
       basketUpdate(item[`${globalData.mainLang}Category`],'minus', item.dishId.split('-')[0], item.dishName, item.dishNameMainLang, item.portionName, item.portionCost, item.dishImg, basketItem.querySelector('.portion-number'));
       renderDishesList(currentCategory);
     });
-    basketListContainer.appendChild(basketItem);
-    totalCost += item.totalCost;
+    basketListContainer.appendChild(basketItem);    
+    totalCost += parseInt(item.totalCost);
   });
   document.getElementById('totalCost').innerHTML = `${words[lang].totalCost} <span>${totalCost}${globalData.currencySymbol}</span>`;
   saveDataToLocal();
