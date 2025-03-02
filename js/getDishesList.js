@@ -1,20 +1,22 @@
-export async  function fetchDishesList() {
-  const sheetId = "1oKdM6Bv7wRntfs35yXl840-W1tPcgIt5VBDnsTU-NVs"; // ID твоей таблицы
-  const apiKey = "AIzaSyAoqUP1XTXL7Y5zXyQ9rfEgMy4d30qDC-Q"; // Вставь сюда API-ключ
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Sheet1?key=${apiKey}`;
-
+export async function fetchDishesList(sheetIdGlobal) {  
+  const sheetId = sheetIdGlobal;
+  const proxyUrl = "https://menu-pro.interactivemenuqr.workers.dev"; 
+  const type = 'tableGet';
   try {
-    let response = await fetch(url);
-    let data = await response.json();
+    let fullResponse = await fetch(`${proxyUrl}/${type}?${sheetId}`);    
+    let fullData = await fullResponse.json();
+    const objectData = JSON.parse(fullData)
     
-    return processData(data.values); // Конвертируем в удобный формат
+    // Конвертируем данные в массив объектов
+    const processedData = processData(objectData.values);
+    console.log(processedData);
+    return processedData;
   } catch (error) {
-    console.error("Ошибка загрузки данных:", error);
-    return [];
+    return console.error("Ошибка загрузки данных:", error);
   }
 }
 
-
+// Функция обработки данных (без изменений)
 function processData(data) {
   const keys = data[0];
   const objectsArray = data.slice(2).map(row => {
