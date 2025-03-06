@@ -268,6 +268,7 @@ fetchDishesList(globalData.sheetIdGlobal)
 
     setTimeout(() => {
       document.querySelector('.loader').classList.add('loader_hide');
+      scrollRight();
     }, 500);
   })
   .catch(error => {
@@ -727,3 +728,35 @@ function newVisit(text){
   })
 }
 newVisit('Открыли сайт')
+
+
+
+const scrollContainer = document.querySelector('#dishesCategoryList');
+const scrollContainer2 = document.querySelector('#dishesList');
+
+function scrollRight() {
+  scrollContainer.scrollBy({
+    left: 500, // Прокрутка на 100px вправо
+    behavior: 'smooth'
+  });
+  scrollContainer2.scrollBy({
+    left: 500, // Прокрутка на 100px вправо
+    behavior: 'smooth'
+  });
+
+  setTimeout(scrollLeft, 1000); // Через 2 секунды возвращаем обратно
+}
+
+function scrollLeft() {
+  scrollContainer.scrollBy({
+    left: -500, // Возвращаем на начальную позицию
+    behavior: 'smooth'
+  });
+  scrollContainer2.scrollBy({
+    left: -500, // Прокрутка на 100px вправо
+    behavior: 'smooth'
+  });
+
+}
+
+// Запускаем анимацию при загрузке страницы
