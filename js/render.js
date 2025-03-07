@@ -736,24 +736,23 @@ const scrollContainer2 = document.querySelector('#dishesList');
 
 function scrollRight() {
   scrollContainer.scrollBy({
-    left: 500, // Прокрутка на 100px вправо
+    left: 1500, // Прокрутка на 100px вправо
     behavior: 'smooth'
   });
   scrollContainer2.scrollBy({
-    left: 500, // Прокрутка на 100px вправо
+    left: 1500, // Прокрутка на 100px вправо
     behavior: 'smooth'
   });
-
-  setTimeout(scrollLeft, 1000); // Через 2 секунды возвращаем обратно
+  setTimeout(scrollLeft, 1500); // Через 2 секунды возвращаем обратно
 }
 
 function scrollLeft() {
   scrollContainer.scrollBy({
-    left: -500, // Возвращаем на начальную позицию
+    left: -1500, // Возвращаем на начальную позицию
     behavior: 'smooth'
   });
   scrollContainer2.scrollBy({
-    left: -500, // Прокрутка на 100px вправо
+    left: -1500, // Прокрутка на 100px вправо
     behavior: 'smooth'
   });
 
