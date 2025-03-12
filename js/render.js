@@ -117,7 +117,7 @@ async function sendMessageForPay(type) {
     portionNumberMessage += 1;
     orderListTextforGoogle += `🔴${portionNumberMessage}. ${item.dishNameMainLang} (${item.mainLangCategory}) - ${item.portionName} x ${item.portionNumber} = ${item.totalCost}${globalData.currencySymbol}    `;
     orderListText += `\n${portionNumberMessage}. ${item.dishNameMainLang} (${item.mainLangCategory}) - ${item.portionName} x ${item.portionNumber} = ${item.totalCost}${globalData.currencySymbol}\n${item.dishName}\n`;
-    totalCostMessage += item.totalCost;
+    totalCostMessage += parseInt(item.totalCost);
   });
   const variables = {
     userLang: lang,
@@ -528,7 +528,7 @@ async function sendOrder() {
       portionNumberMessage += 1;
       orderDishesLit += `${portionNumberMessage}. ${item.dishName} ${item.mainLangCategory}   `;
       orderMessage += `\n${portionNumberMessage}. ${item.dishNameMainLang} (${item.mainLangCategory}) - ${item.portionName} x ${item.portionNumber} = ${item.totalCost}${globalData.currencySymbol}\n${item.dishName}\n`;
-      totalCostMessage += item.totalCost;
+      totalCostMessage += parseInt(item.totalCost);
     });
     orderMessage += `\n ------------------- \n`;
     orderMessage += `\n${words[globalData.mainLang].newDishes}\n`;
@@ -540,7 +540,7 @@ async function sendOrder() {
     portionNumberMessage += 1;
     orderDishesLit += `${portionNumberMessage}. ${item.dishName} (${item.mainLangCategory})  `;
     orderMessage += `\n${portionNumberMessage}. ${item.dishNameMainLang} (${item.mainLangCategory}) - ${item.portionName} x ${item.portionNumber} = ${item.totalCost}${globalData.currencySymbol}\n${item.dishName}\n`;
-    totalCostMessage += item.totalCost;
+    totalCostMessage += parseInt(item.totalCost);
   });
 
   orderMessage += `\n\n💰 ${words[globalData.mainLang].totalCostOrder}  ${totalCostMessage}${globalData.currencySymbol}`;
@@ -652,7 +652,7 @@ function renderOrderList() {
       </div>
       <span class='orderTime'>${item.orderTime}</span>
       `;
-    totalCost += item.totalCost;
+    totalCost += parseInt(item.totalCost);
     orderListDiv.appendChild(cardItem);
   });
   document.querySelector('#totalCostOrder').innerHTML = `${words[lang].totalCostOrder} <br> <span>${totalCost} ${globalData.currencySymbol}</span>`;

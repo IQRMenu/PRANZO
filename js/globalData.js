@@ -2,7 +2,7 @@ export let globalData = {
   sheetIdGlobal: '1oKdM6Bv7wRntfs35yXl840-W1tPcgIt5VBDnsTU-NVs',
   cafeName: 'PRANZO',
   botToken: '',
-  chatId: '-1002275972138',
+  chatId: '-4728665422', //-1002275972138
 
   mainLang: 'es',
   currencySymbol: '$',

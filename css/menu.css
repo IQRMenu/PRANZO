@@ -277,7 +277,7 @@ button.basket {
 }
 
 button.basket_have {
-  animation: pulse-wave 1s infinite linear;
+  animation: pulse-wave 1s infinite linear alternate;
 }
 
 @keyframes basketButton {
@@ -603,7 +603,7 @@ button.basket-clouse_active {
 .basket-item__info {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
   flex-grow: 1;
 }
 .basket-item__info h3{
@@ -701,6 +701,7 @@ button.basket-clouse_active {
   margin: 0 auto;
   flex-shrink: 0;
   border: 1px solid;
+  animation: pulse-wave 1s infinite linear alternate;
 }
 
 .button-order.display_none {
@@ -815,15 +816,15 @@ footer a {
 #yourOrder {
   background-color: var(--color3);
   color: var(--color1);
-  padding: 10px;
+  padding: 4px;
   border: 1px solid var(--color1);
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
-#yourOrder._active {
+/* #yourOrder._active {
   animation: pulse-wave 1s infinite linear;
-}
+} */
 
 .order-box {
   opacity: 0;
@@ -913,12 +914,14 @@ footer a {
     outline: 1px solid var(--color1);
     /* Начальный размер волны */
     outline-offset: 0;
+    background-color: transparent;
   }
 
   100% {
     outline: 2px solid #ffffff00;
     /* Волна исчезает */
     outline-offset: 16px;
+    background-color: var(--color3);
     /* Максимальное расстояние волны */
   }
 }
